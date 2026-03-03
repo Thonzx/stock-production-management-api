@@ -143,7 +143,20 @@ Frontend disponível em:
 stock-production-manager/
 ├── backend/
 ├── frontend/
+├── docs/             
 └── README.md
+
+---
+
+## 🧪 Estratégia de Testes Automatizados
+
+O projeto foi construído com foco em qualidade e resiliência, utilizando uma estratégia de **Pirâmide de Testes**:
+
+* **Back-end (Unitários e Integração):** Utilizado `JUnit 5` e `REST Assured` no Quarkus para validar os endpoints REST e a lógica do cálculo de gargalo de produção (RF004).
+* **Front-end (Unitários):** Utilizado `Vitest` e `React Testing Library` para garantir a renderização de componentes e a segurança/bloqueio de rotas na tela de Login.
+* **End-to-End (E2E):** Utilizado `Cypress` para simular a jornada real do usuário (Login ➔ Cadastro ➔ Receita ➔ Gargalo Matemático), validando a comunicação perfeita entre o React e o Banco de Dados.
+
+![Demonstração do Teste E2E com Cypress](./docs/cypress-e2e.png)
 
 ---
 
@@ -152,15 +165,13 @@ stock-production-manager/
 * Autenticação com JWT
 * Controle de estoque mínimo
 * Dashboard com indicadores de produção
-* Testes automatizados
 * Deploy em ambiente cloud
 
 ---
 
 ## 👨‍💻 Autor
 
-Wellython Souza
+Wellython Souza, 
 Graduado em Engenharia de Software
-Projeto desenvolvido como desafio prático para processo seletivo da Autoflex.
 
----
+Projeto desenvolvido como desafio prático para processo seletivo da Autoflex.
