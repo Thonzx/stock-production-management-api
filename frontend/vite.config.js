@@ -4,8 +4,13 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api': 'http://localhost:8080' // Essa é a ponte mágica que eu tinha apagado!
+    }
+  },
   test: {
     globals: true,
-    environment: 'jsdom', // Finge ser um navegador no terminal
+    environment: 'jsdom',
   }
 })
