@@ -1,23 +1,30 @@
-/* SISTEMA PRINCIPAL - IDENTIDADE AUTOFLEX */
+/* SISTEMA PRINCIPAL - ESTÉTICA CYPRESS UI (Minimalista) */
 
 :root {
-  /* A Nossa Paleta de Cores Oficial */
-  --azul-petroleo: #173f4f;
-  --azul-petroleo-escuro: #0f2a36;
-  --cobre: #d97725;
-  --cobre-escuro: #b85d19;
-  --cinza-aco: #71797e;
-  --cinza-fundo: #f4f6f8;
-  --branco: #ffffff;
-  --texto-escuro: #2c3539;
+  /* A Paleta Híbrida do Cypress */
+  --sidebar-bg: #111424;       /* Azul marinho super escuro (quase preto) */
+  --sidebar-hover: #1e243a;    /* Fundo ao passar o mouse no menu */
+  --sidebar-text: #8a94a6;     /* Cinza azulado para itens inativos */
+  --sidebar-active: #ffffff;   /* Branco para o item ativo */
+  
+  --cypress-green: #00e59b;    /* O Verde Neon característico do Cypress */
+  --cypress-blue: #2e5bff;     /* Azul vibrante dos botões principais */
+  --cypress-blue-hover: #1a44dd;
+  
+  --main-bg: #f9fafb;          /* Fundo da tela central (cinza muuuito claro) */
+  --card-bg: #ffffff;          /* Fundo dos painéis (branco puro) */
+  --text-dark: #111827;        /* Texto principal (quase preto) */
+  --text-muted: #6b7280;       /* Texto secundário */
+  --border-light: #e5e7eb;     /* Bordas super finas e elegantes */
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--cinza-fundo);
-  color: var(--texto-escuro);
+  /* Fontes modernas e limpas, típicas de UI de desenvolvedor */
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-dark);
 }
 
 .admin-layout {
@@ -25,35 +32,35 @@ body {
   min-height: 100vh;
 }
 
-/* --- BARRA LATERAL (O Azul Petróleo) --- */
+/* --- BARRA LATERAL (A Escura) --- */
 .sidebar {
   width: 260px;
-  background-color: var(--azul-petroleo);
-  color: var(--branco);
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
   z-index: 10;
-  
-  /* --- AS 3 LINHAS MÁGICAS --- */
   position: sticky;
   top: 0;
-  height: 100vh; /* Trava a altura para ser exatamente o tamanho da tela */
+  height: 100vh;
 }
 
 .sidebar-header {
-  padding: 25px 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  padding: 30px 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
   text-align: center;
-  background-color: var(--azul-petroleo-escuro);
-  border-bottom: 3px solid var(--cobre); /* O Cobre dividindo */
-  letter-spacing: 1px;
+  color: var(--sidebar-active);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .sidebar-menu {
   list-style: none;
-  padding: 0;
+  padding: 15px 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -61,28 +68,29 @@ body {
 }
 
 .sidebar-menu li {
-  padding: 16px 25px;
+  padding: 14px 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 15px;
-  border-left: 4px solid transparent;
-  font-size: 1.05rem;
+  gap: 12px;
+  border-left: 3px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .sidebar-menu li:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--sidebar-hover);
+  color: var(--sidebar-active);
 }
 
 .sidebar-menu li.active {
-  background-color: var(--azul-petroleo-escuro);
-  border-left: 4px solid var(--cobre); /* Destaque cobre na aba ativa */
-  color: var(--cobre);
-  font-weight: bold;
+  background-color: var(--sidebar-hover);
+  border-left: 3px solid var(--cypress-green); /* O detalhe verde neon */
+  color: var(--sidebar-active);
 }
 
-/* --- ÁREA CENTRAL --- */
+/* --- ÁREA CENTRAL (A Clara e Limpa) --- */
 .main-wrapper {
   flex: 1;
   display: flex;
@@ -90,35 +98,35 @@ body {
 }
 
 .top-header {
-  background-color: var(--branco);
+  background-color: var(--card-bg);
   padding: 20px 30px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--azul-petroleo);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .content-area {
-  padding: 30px;
+  padding: 35px;
   overflow-y: auto;
 }
 
-/* --- CARDS E FORMULÁRIOS --- */
+/* --- CARDS E FORMULÁRIOS (Minimalistas, sem sombras fortes) --- */
 .card, .centered-content {
-  background-color: var(--branco);
-  padding: 25px;
+  background-color: var(--card-bg);
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Sombra quase invisível, bem moderna */
   margin-bottom: 25px;
-  border-top: 4px solid var(--cinza-aco); /* Toque de cinza aço */
 }
 
 .card h3 {
   margin-top: 0;
-  color: var(--azul-petroleo);
-  border-bottom: 1px solid #eee;
-  padding-bottom: 12px;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
 }
 
 .form-group {
@@ -136,131 +144,128 @@ body {
 }
 
 .input-wrapper label {
-  font-size: 0.9rem;
-  margin-bottom: 8px;
-  color: var(--cinza-aco);
-  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .input-field {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: var(--texto-escuro);
-  background-color: var(--cinza-fundo);
-  transition: border-color 0.3s;
+  padding: 10px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: var(--card-bg);
+  transition: all 0.2s;
 }
 
 .input-field:focus {
   outline: none;
-  border-color: var(--cobre);
-  box-shadow: 0 0 5px rgba(217, 119, 37, 0.3);
+  border-color: var(--cypress-blue);
+  box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.15); /* Foco suave azul */
 }
 
-/* --- BOTÕES --- */
+/* --- BOTÕES (Estilo botão do Cypress) --- */
 .btn-primary {
-  background-color: var(--cobre); /* Metal Quente */
-  color: var(--branco);
+  background-color: var(--cypress-blue);
+  color: #fff;
   border: none;
-  padding: 12px 25px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s;
 }
 
 .btn-primary:hover {
-  background-color: var(--cobre-escuro);
-  box-shadow: 0 4px 10px rgba(217, 119, 37, 0.3);
+  background-color: var(--cypress-blue-hover);
 }
 
 .btn-secondary {
-  background-color: var(--cinza-aco);
-  color: var(--branco);
-  border: none;
-  padding: 9px 18px;
-  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s;
 }
 
 .btn-secondary:hover {
-  background-color: #5a6266;
+  background-color: var(--main-bg);
+  border-color: #d1d5db;
 }
 
 .btn-calculate {
-  background-color: var(--cobre);
-  color: var(--branco);
-  border: none;
-  padding: 15px 30px;
+  background-color: #f0fdf4; /* Fundinho verde bem claro */
+  color: #166534; /* Texto verde escuro */
+  border: 1px solid #bbf7d0;
+  padding: 12px 25px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 15px rgba(217, 119, 37, 0.4);
-  transition: transform 0.2s, background-color 0.3s;
-  width: 100%;
-  margin-top: 10px;
-  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: auto;
+  margin-top: 15px;
 }
 
 .btn-calculate:hover {
-  background-color: var(--cobre-escuro);
-  transform: translateY(-2px);
+  background-color: #dcfce7;
 }
 
-/* Botão de Voltar (Padrão IHC / Ghost Button) */
 .btn-back {
   background: none;
   border: none;
-  color: var(--cinza-aco);
-  font-size: 1rem;
-  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
   padding: 0;
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  gap: 6px;
 }
 
 .btn-back:hover {
-  color: var(--azul-petroleo);
-  transform: translateX(-3px); /* Efeito sutil de mover a setinha para a esquerda */
+  color: var(--cypress-blue);
 }
 
 /* --- TABELAS --- */
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--branco);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  background-color: var(--card-bg);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .data-table th, .data-table td {
-  padding: 15px;
-  text-align: center; /* <-- A mágica acontece aqui! Mudamos para center */
-  border-bottom: 1px solid #eee;
+  padding: 14px 20px;
+  text-align: left; /* Tabela clean geralmente é alinhada à esquerda */
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.95rem;
 }
 
 .data-table th {
-  background-color: var(--azul-petroleo);
-  color: var(--branco);
-  font-weight: bold;
+  background-color: var(--main-bg);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.data-table tr:hover {
-  background-color: #f9fbfc;
+.data-table tr:last-child td {
+  border-bottom: none;
 }
 
-/* --- DASHBOARD CARDS (Ajustados para a paleta) --- */
+/* --- DASHBOARD CARDS --- */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -269,98 +274,60 @@ body {
 }
 
 .stat-card {
-  padding: 25px 20px;
+  padding: 25px;
   border-radius: 8px;
-  color: var(--branco);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  border-bottom: 4px solid rgba(0,0,0,0.2);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .stat-card h4 {
   margin: 0 0 10px 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .stat-card p {
   margin: 0;
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--text-dark);
 }
 
-.bg-blue { background-color: var(--azul-petroleo); }
-.bg-green { background-color: var(--cinza-aco); } 
-.bg-yellow { background-color: var(--cobre); }
-.bg-purple { background-color: var(--azul-petroleo-escuro); }
-
-/* --- RESULTADO DO GARGALO (MINIMALISTA) --- */
+/* --- RESULTADO DO GARGALO --- */
 .result-panel {
-  background-color: var(--branco);
-  padding: 40px 30px;
-  border-radius: 12px;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 8px;
   text-align: center;
-  margin-top: 30px;
-  border: 1px solid #eaeaea; /* Borda super sutil em vez da tracejada */
-  box-shadow: 0 10px 30px rgba(23, 63, 79, 0.04); /* Sombra levíssima */
+  margin-top: 20px;
+  border: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.btn-calculate {
-  background-color: transparent;
-  color: var(--cobre);
-  border: 2px solid var(--cobre);
-  padding: 12px 35px;
-  border-radius: 50px; /* Botão formato pílula elegante */
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-  width: auto; /* Remove o botão gigante que ocupava a tela toda */
-  letter-spacing: 0.5px;
-}
-
-.btn-calculate:hover {
-  background-color: var(--cobre);
-  color: var(--branco);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(217, 119, 37, 0.2);
-}
-
-.result-content {
-  margin-top: 35px;
-  animation: fadeIn 0.5s ease; /* Animação suave ao aparecer o resultado */
 }
 
 .result-label {
   display: block;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--cinza-aco);
-  font-weight: 700;
+  color: var(--text-muted);
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .result-panel .result-number {
-  font-size: 4.5rem; /* Número gigante e impactante */
-  font-weight: 800;
-  color: var(--azul-petroleo); /* Cor sólida e sofisticada, sem brilho */
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #111827;
   line-height: 1;
   margin: 0;
 }
 
 .result-unit {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--cinza-aco);
-  vertical-align: middle;
-  letter-spacing: normal;
-}
-
-/* Animação para o resultado não aparecer de soco */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: normal;
 }

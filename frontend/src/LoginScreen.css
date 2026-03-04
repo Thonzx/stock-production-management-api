@@ -1,27 +1,28 @@
-/* TELA DE LOGIN - IDENTIDADE AUTOFLEX COM CURVA */
+/* TELA DE LOGIN - ESTÉTICA CYPRESS UI */
 
 .login-screen-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f6f8; /* Cinza Aço bem claro / Branco sujo */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb; /* main-bg */
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 .main-container {
   display: flex;
   width: 900px;
   height: 500px;
-  box-shadow: 0 15px 40px rgba(23, 63, 79, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra bem leve */
   border-radius: 12px;
   overflow: hidden;
-  background-color: #ffffff; /* Fundo branco para a direita */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .left-panel {
   flex: 1;
-  background-color: #173f4f; /* Azul Petróleo */
+  background-color: #111424; /* Azul escurão do Cypress */
   color: #ffffff;
   padding: 40px;
   display: flex;
@@ -30,58 +31,56 @@
   align-items: center;
   text-align: center;
   
-  /* A MÁGICA DA CURVA VOLTOU AQUI! */
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-  border-right: 5px solid #d97725; /* O Cobre fazendo a curva */
+  /* Curva sutil */
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-right: 4px solid #00e59b; /* O verde neon do Cypress */
   
-  z-index: 2; /* Para a sombra da curva aparecer por cima do painel branco */
-  box-shadow: 10px 0 20px rgba(0,0,0,0.15);
+  z-index: 2;
 }
 
 .welcome-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #ffffff;
+  font-weight: 700;
 }
 
 .welcome-subtext {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 30px;
-  color: #aeb8bd;
+  color: #8a94a6;
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #d97725; /* Cobre */
-  color: #d97725;
+  border: 1px solid #00e59b;
+  color: #00e59b;
   padding: 10px 30px;
-  border-radius: 25px;
-  font-weight: bold;
+  border-radius: 6px; /* Botões mais quadrados, modernos */
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
-  background: #d97725;
-  color: #ffffff;
+  background: rgba(0, 229, 155, 0.1);
 }
 
 .right-panel {
   flex: 1.2;
-  background-color: transparent; 
-  padding: 40px 60px 40px 80px; /* Um pouco mais de espaço na esquerda por causa da curva */
+  background-color: #ffffff; 
+  padding: 40px 60px 40px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .form-title {
-  font-size: 2rem;
-  color: #173f4f; /* Azul Petróleo */
+  font-size: 1.8rem;
+  color: #111827;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .input-group {
@@ -92,18 +91,19 @@
 .input-group input {
   width: 100%;
   padding: 12px 20px 12px 40px;
-  background-color: #f4f6f8;
-  border: 1px solid #71797e; /* Cinza Aço */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
-  font-size: 1rem;
-  color: #173f4f;
-  transition: border-color 0.3s;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: all 0.2s;
   box-sizing: border-box;
 }
 
 .input-group input:focus {
   outline: none;
-  border-color: #d97725; /* Foco no Cobre */
+  border-color: #2e5bff;
+  box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.15);
 }
 
 .input-icon {
@@ -111,7 +111,7 @@
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #71797e;
+  color: #9ca3af;
 }
 
 .forgot-password-link {
@@ -120,32 +120,31 @@
 }
 
 .forgot-password-link a {
-  color: #71797e;
+  color: #6b7280;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .forgot-password-link a:hover {
-  color: #d97725;
+  color: #2e5bff;
 }
 
 .btn-primary {
   width: 100%;
-  padding: 14px;
-  background-color: #d97725; /* Cobre */
+  padding: 12px;
+  background-color: #2e5bff; /* Azul Cypress */
   color: #ffffff;
   border: none;
   border-radius: 6px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 15px rgba(217, 119, 37, 0.3);
+  transition: all 0.2s;
 }
 
 .btn-primary:hover {
-  background-color: #b85d19;
+  background-color: #1a44dd;
 }
 
 .social-login-section {
@@ -154,8 +153,8 @@
 }
 
 .social-text {
-  color: #71797e;
-  font-size: 0.9rem;
+  color: #6b7280;
+  font-size: 0.85rem;
   margin-bottom: 15px;
 }
 
@@ -166,21 +165,21 @@
 }
 
 .social-icon-btn {
-  background-color: #f4f6f8;
-  border: 1px solid #71797e;
-  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px; /* Ajustado para quadrado arredondado */
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #173f4f;
+  color: #6b7280;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .social-icon-btn:hover {
-  background-color: #173f4f;
-  color: #ffffff;
-  border-color: #173f4f;
+  border-color: #d1d5db;
+  color: #111827;
+  background-color: #f9fafb;
 }
