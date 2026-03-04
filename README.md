@@ -148,6 +148,29 @@ stock-production-manager/
 
 ---
 
+---
+
+## 📦 Build para Produção
+
+O projeto está configurado para gerar artefatos otimizados para ambientes de produção.
+
+### 🔹 Build do Frontend (React + Vite)
+Gera os arquivos estáticos minificados na pasta `dist/`.
+
+```bash
+cd frontend
+npm run build
+```
+
+### 🔹 Build do Backend (Quarkus)
+O Quarkus utiliza o conceito de *Fast-Jar*, otimizando o tempo de inicialização e o consumo de memória. O artefato final será gerado na pasta `backend/target/quarkus-app/`.
+
+```bash
+cd backend
+./mvnw clean package  # Linux/Mac
+.\mvnw.cmd clean package # Windows
+```
+
 ## 🧪 Estratégia de Testes Automatizados
 
 O projeto foi construído com foco em qualidade e resiliência, utilizando uma estratégia de **Pirâmide de Testes**:
