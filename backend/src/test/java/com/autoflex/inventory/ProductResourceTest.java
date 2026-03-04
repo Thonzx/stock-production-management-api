@@ -33,7 +33,6 @@ public class ProductResourceTest {
              .body(is(notNullValue()));
     }
     
-    // Desafio Sênior: Testar a criação de um Produto isoladamente
     @Test
     public void testCreateProductEndpoint() {
         String newProductJson = """

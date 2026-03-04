@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import './LoginScreen.css';
 
-// Reparou no { onLogin } aqui? É ele quem vai falar com o App.jsx!
 const LoginScreen = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const onLoginSubmit = (e) => {
     e.preventDefault();
-    // Em vez de só dar um alert, agora ele envia os dados para o App.jsx validar
     onLogin(username, password);
   };
 

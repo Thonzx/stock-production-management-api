@@ -1,11 +1,9 @@
-/* TELA DE LOGIN - ESTÉTICA CYPRESS UI */
-
 .login-screen-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f9fafb; /* main-bg */
+  background-color: #f9fafb; 
   font-family: 'Inter', system-ui, sans-serif;
 }
 
@@ -13,7 +11,7 @@
   display: flex;
   width: 900px;
   height: 500px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra bem leve */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
   border-radius: 12px;
   overflow: hidden;
   background-color: #ffffff;
@@ -22,7 +20,7 @@
 
 .left-panel {
   flex: 1;
-  background-color: #111424; /* Azul escurão do Cypress */
+  background-color: #111424;
   color: #ffffff;
   padding: 40px;
   display: flex;
@@ -34,7 +32,7 @@
   /* Curva sutil */
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
-  border-right: 4px solid #00e59b; /* O verde neon do Cypress */
+  border-right: 4px solid #00e59b; 
   
   z-index: 2;
 }
@@ -56,7 +54,7 @@
   border: 1px solid #00e59b;
   color: #00e59b;
   padding: 10px 30px;
-  border-radius: 6px; /* Botões mais quadrados, modernos */
+  border-radius: 6px; 
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -133,7 +131,7 @@
 .btn-primary {
   width: 100%;
   padding: 12px;
-  background-color: #2e5bff; /* Azul Cypress */
+  background-color: #2e5bff; 
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -167,7 +165,7 @@
 .social-icon-btn {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 6px; /* Ajustado para quadrado arredondado */
+  border-radius: 6px; 
   width: 40px;
   height: 40px;
   display: flex;

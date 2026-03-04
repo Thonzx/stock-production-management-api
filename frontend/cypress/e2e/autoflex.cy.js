@@ -40,7 +40,6 @@ describe('Autoflex E2E Flow - Full Core Journey', () => {
     cy.contains('tr', prodCode).contains('button', 'Recipe').click()
     cy.contains('Add Raw Material to Recipe').should('be.visible')
     
-    // Usa o nome dinâmico que acabamos de criar para achar a opção correta no Select
     cy.get('select').select(`${rmName} (Stock: 500)`)
     cy.get('input[type="number"]').type('5')
     cy.contains('button', 'Add').click()

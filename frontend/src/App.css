@@ -1,27 +1,23 @@
-/* SISTEMA PRINCIPAL - ESTÉTICA CYPRESS UI (Minimalista) */
-
 :root {
-  /* A Paleta Híbrida do Cypress */
-  --sidebar-bg: #111424;       /* Azul marinho super escuro (quase preto) */
-  --sidebar-hover: #1e243a;    /* Fundo ao passar o mouse no menu */
-  --sidebar-text: #8a94a6;     /* Cinza azulado para itens inativos */
-  --sidebar-active: #ffffff;   /* Branco para o item ativo */
+  --sidebar-bg: #111424;       
+  --sidebar-hover: #1e243a;    
+  --sidebar-text: #8a94a6;     
+  --sidebar-active: #ffffff;   
   
-  --cypress-green: #00e59b;    /* O Verde Neon característico do Cypress */
-  --cypress-blue: #2e5bff;     /* Azul vibrante dos botões principais */
+  --cypress-green: #00e59b;    
+  --cypress-blue: #2e5bff;     
   --cypress-blue-hover: #1a44dd;
   
-  --main-bg: #f9fafb;          /* Fundo da tela central (cinza muuuito claro) */
-  --card-bg: #ffffff;          /* Fundo dos painéis (branco puro) */
-  --text-dark: #111827;        /* Texto principal (quase preto) */
-  --text-muted: #6b7280;       /* Texto secundário */
-  --border-light: #e5e7eb;     /* Bordas super finas e elegantes */
+  --main-bg: #f9fafb;         
+  --card-bg: #ffffff;         
+  --text-dark: #111827;       
+  --text-muted: #6b7280;       
+  --border-light: #e5e7eb;    
 }
 
 body {
   margin: 0;
   padding: 0;
-  /* Fontes modernas e limpas, típicas de UI de desenvolvedor */
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--main-bg);
   color: var(--text-dark);
@@ -86,7 +82,7 @@ body {
 
 .sidebar-menu li.active {
   background-color: var(--sidebar-hover);
-  border-left: 3px solid var(--cypress-green); /* O detalhe verde neon */
+  border-left: 3px solid var(--cypress-green); 
   color: var(--sidebar-active);
 }
 
@@ -111,13 +107,13 @@ body {
   overflow-y: auto;
 }
 
-/* --- CARDS E FORMULÁRIOS (Minimalistas, sem sombras fortes) --- */
+/* --- CARDS E FORMULÁRIOS --- */
 .card, .centered-content {
   background-color: var(--card-bg);
   padding: 30px;
   border-radius: 8px;
   border: 1px solid var(--border-light);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Sombra quase invisível, bem moderna */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
   margin-bottom: 25px;
 }
 
@@ -163,10 +159,10 @@ body {
 .input-field:focus {
   outline: none;
   border-color: var(--cypress-blue);
-  box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.15); /* Foco suave azul */
+  box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.15); 
 }
 
-/* --- BOTÕES (Estilo botão do Cypress) --- */
+/* --- BOTÕES --- */
 .btn-primary {
   background-color: var(--cypress-blue);
   color: #fff;
@@ -201,8 +197,8 @@ body {
 }
 
 .btn-calculate {
-  background-color: #f0fdf4; /* Fundinho verde bem claro */
-  color: #166534; /* Texto verde escuro */
+  background-color: #f0fdf4; 
+  color: #166534; 
   border: 1px solid #bbf7d0;
   padding: 12px 25px;
   border-radius: 6px;
@@ -247,7 +243,7 @@ body {
 
 .data-table th, .data-table td {
   padding: 14px 20px;
-  text-align: left; /* Tabela clean geralmente é alinhada à esquerda */
+  text-align: left; 
   border-bottom: 1px solid var(--border-light);
   font-size: 0.95rem;
 }

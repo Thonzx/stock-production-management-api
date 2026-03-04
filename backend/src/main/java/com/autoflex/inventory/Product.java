@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 @Entity
 public class Product extends PanacheEntity {
     
-    // O PanacheEntity já cria o "public Long id" automaticamente para nós!
-
     @Column(nullable = false, unique = true)
     public String code;
 
