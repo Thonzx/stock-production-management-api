@@ -1,4 +1,4 @@
-# 🏭 Autoflex - Sistema de Gestão de Produção e Estoque
+# 🏭 Sistema de Gestão de Produção e Estoque
 
 Sistema **Full Stack** desenvolvido para gerenciamento de produção industrial e controle de estoque de matérias-primas.
 
